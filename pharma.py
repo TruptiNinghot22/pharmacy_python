@@ -532,23 +532,7 @@ class PharmacyManagementSystem:
     def exit_application(self):
         result = messagebox.askquestion("Exit Application", "Do you want to exit the application?")
         if result == 'yes':
-            self.root.destroy()
-        '''
-        def search_data(self):
-            conn = mysql.connector.connect(host="localhost", username="root", password="data@123", database="tt1")
-            my_cursor = conn.cursor()
-            my_cursor.execute(f"SELECT * FROM pharmacymanage WHERE {self.search_var.get()} LIKE %s", ('%' + str(self.serchTxt_var.get()) + '%',))
-
-            rows = my_cursor.fetchall()
-            if len(rows) != 0:
-                self.pharmacy_table.delete(*self.pharmacy_table.get_children())
-                for i in rows:
-                    self.pharmacy_table.insert("",END,values=i)
-                conn.commit()
-            conn.close()
-            '''
-
-            
+            self.root.destroy()      
 
 if __name__ == "__main__":
     root = Tk()
